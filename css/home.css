@@ -1,0 +1,346 @@
+
+
+/*.section{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 130px;
+}
+
+section .container .font-nav h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 70px;
+    position: relative;
+    top:  -90px;
+    left: 0;
+}
+
+section .container .font-nav h1 span {
+    margin-left: 15px;
+    color: #024145;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section .container .main-image img{
+    width: 700px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 500px;
+    text-align: justify;
+    position: relative;
+    left: 350px;
+    top: -195px;
+    bottom: 120px;
+    line-height: 20px;
+}
+
+section .main-btn{
+    background: #024145;
+    position: relative;
+    left: 350px;
+    top: -160px;
+    bottom: 30px;
+    width: 200px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+
+section .main-btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main-btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+
+section .main-btn:hover i{
+    transform: translateX(7px);
+    color: #ffffff;
+}*/
+
+/*about
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.about .about_main  .about_text h1 span{
+    color: #024145;
+    margin-right: 15px;
+}
+
+.about .about_main  .about_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0 ;
+}
+
+.about .about_btn{
+    background: #024145;
+    position: relative;
+    left: 56%;
+    top: -12%;
+    bottom: 30px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #ffffff;
+}*/
+
+
+/*menu
+
+.menu h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 5rem;
+
+}
+
+.menu h1 span{
+    color: #024145;
+    margin-left: 15px;
+    font-family:  'Times New Roman', Times, serif;
+
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #024145;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    
+}
+
+.menu .menu_box .menu_card{
+    width: 330px;
+    height: 500px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small .small_card{
+    width: 70px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 1;
+    border-radius: 7px;
+}
+
+
+.menu .menu_box .menu_card .menu_info{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.menu .menu_box .menu_card .menu_info h4{
+    position: relative;
+    top: -10px;
+    font-size: 1.3rem;
+}
+
+.menu .menu_box .menu_card .menu_btn{
+    background: #024145;
+    bottom: 30px;
+    width: 120px;
+    cursor: pointer;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu .menu_box .menu_card .menu_btn:hover{
+    color: #f7dcdc;
+    padding: 10px 10px;
+}
+
+.menu .menu_box .menu_card .menu_icon{
+   position: relative;
+   top: -20px;
+   color: #f0c1c1;
+}
+
+/*.menu .menu_box .menu_card .small_card{
+    position: relative;
+    top: -100px;
+    right: 28px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color: #024145;
+}*/
+
+/*Gallery*/
+
+.gallery h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 5rem;
+}
+
+
+.gallery h1 span{
+    color: #024145;
+    margin-left: 15px;
+    font-family:  'Times New Roman', Times, serif;
+}
+
+.gallery h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #024145;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.gallery .gallery_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    
+}
+
+
+.gallery .gallery_image_box .gallery_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(238, 188, 188);
+}
+
+.gallery .gallery_image_box .gallery_image img{
+    width: 100%;
+    transition: 03s;
+}
+
+.gallery .gallery_image_box .gallery_image:hover img{
+    opacity: 0.4;
+}
+
+.gallery .gallery_image_box .gallery_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #024145;
+    font-family: polo;
+    z-index: 5;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.gallery .gallery_image_box .gallery_image h3:hover{
+    opacity: 1;
+}
+
+.gallery .gallery_image_box .gallery_image p{
+    position: absolute;
+    width: 400px;
+    margin-top: 30px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 22px;
+    opacity: 0;
+    z-index: 5;
+    transition: 0.3s;
+    
+}
+
+.gallery .gallery_image_box .gallery_image:hover p{
+    opacity: 1;
+}
+
+.gallery .gallery_image_box .gallery_image .gallery_btn{
+    position: absolute;
+    margin-top: 189px;
+    color: #ffffff;
+    background: #024145;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 1;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.gallery .gallery_image_box .gallery_image:hover .gallery_btn{
+   opacity: 1;
+   transform: translateY(0);
+}
+
+
+@media (max-width: 700px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+}
