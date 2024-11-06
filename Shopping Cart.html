@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container my-5">
+    <!-- Jumbotron-style Header -->
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5 text-center">
+            <h1 class="text-success fw-bolder display-4"><span class="text-black">Shopping </span> Cart</h1>
+            <p class="fs-4">Your selected items are ready for checkout!</p>
+        </div>
+    </div>
+
+    <!-- Cart Items and Summary Section -->
+    <div id="cartSection" class="row g-4">
+        <div class="col-lg-8">
+            <!-- Cart Items -->
+            <div id="cartItems">
+                <!-- Product Card 1 -->
+                <div class="card mb-3 cart-item">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="product1.png" class="img-fluid rounded-start" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4 fw-bold">Product 1</h5>
+                                <p class="card-text item-price fs-4">$10.00</p>
+                                <div class="input-group mb-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary decrease-qty" type="button">-</button>
+                                    <input type="text" class="form-control text-center qty-input" value="1">
+                                    <button class="btn btn-outline-secondary increase-qty" type="button">+</button>
+                                </div>
+                                <button class="btn btn-danger btn-sm remove-item fs-4">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="card mb-3 cart-item">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="product1.png" class="img-fluid rounded-start" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4 fw-bold">Product 1</h5>
+                                <p class="card-text item-price fs-4">$10.00</p>
+                                <div class="input-group mb-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary decrease-qty" type="button">-</button>
+                                    <input type="text" class="form-control text-center qty-input" value="1">
+                                    <button class="btn btn-outline-secondary increase-qty" type="button">+</button>
+                                </div>
+                                <button class="btn btn-danger btn-sm remove-item fs-4">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="card mb-3 cart-item">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="product1.png" class="img-fluid rounded-start" alt="Product Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fs-4 fw-bold">Product 1</h5>
+                                <p class="card-text item-price fs-4">$10.00</p>
+                                <div class="input-group mb-3" style="width: 120px;">
+                                    <button class="btn btn-outline-secondary decrease-qty" type="button">-</button>
+                                    <input type="text" class="form-control text-center qty-input" value="1">
+                                    <button class="btn btn-outline-secondary increase-qty" type="button">+</button>
+                                </div>
+                                <button class="btn btn-danger btn-sm remove-item fs-4">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat additional product cards as needed -->
+            </div>
+        </div>
+        
+        <!-- Cart Summary Section -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold fs-2">Cart Summary</h5>
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-4">Subtotal:</p>
+                        <p class="fs-4" id="subtotal">$20.00</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <p class="fs-4">Shipping:</p>
+                        <p class="fs-4" id="shipping">$1.00</p>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="fs-4">Total:</h6>
+                        <h6 class="fs-4" id="total">$21.00</h6>
+                    </div>
+                    <button class="btn btn-success w-100 mt-3 fs-4">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Constants
+    const shippingCost = 1.00;
+
+    // Calculate and update cart total
+    function updateCart() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        let subtotal = 0;
+
+        cartItems.forEach(item => {
+            const price = parseFloat(item.querySelector('.item-price').textContent.replace('$', ''));
+            const quantity = parseInt(item.querySelector('.qty-input').value);
+            subtotal += price * quantity;
+        });
+
+        document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
+        document.getElementById("total").textContent = `$${(subtotal + shippingCost).toFixed(2)}`;
+    }
+
+    // Event delegation for dynamic item operations
+    document.getElementById('cartItems').addEventListener('click', function(event) {
+        const target = event.target;
+        const cartItem = target.closest('.cart-item');
+
+        if (target.classList.contains('increase-qty')) {
+            const qtyInput = cartItem.querySelector('.qty-input');
+            qtyInput.value = parseInt(qtyInput.value) + 1;
+            updateCart();
+        } else if (target.classList.contains('decrease-qty')) {
+            const qtyInput = cartItem.querySelector('.qty-input');
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+                updateCart();
+            }
+        } else if (target.classList.contains('remove-item')) {
+            cartItem.remove();
+            updateCart();
+        }
+    });
+
+    // Initial cart update
+    updateCart();
+</script>
+</body>
+</html>
